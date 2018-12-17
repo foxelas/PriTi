@@ -15,6 +15,7 @@ import AccountRecovery from '@/views/AccountManagement/AccountRecovery'
 import NotSignedIn from '@/views/AccountManagement/NotSignedIn'
 import SignIn from '@/views/AccountManagement/SignIn'
 import SignUp from '@/views/AccountManagement/SignUp'
+import Courses from '@/views/Courses'
 
 Vue.use(Router)
 
@@ -85,6 +86,12 @@ export default new Router({
       path: "/tutor/:tutorId/profile",
       name: "TutorProfile",
       component: TutorProfile,
+      props: true
+    },
+    {
+      path: "/courses/:courseId",
+      name: "Courses",
+      component: Courses,
       props: true
     },
     {

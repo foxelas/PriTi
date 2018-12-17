@@ -27,9 +27,10 @@ export default {
     ...mapGetters({
       tutors: "tutors/ALL_TUTORS"
     }),
+    currentCourse() {
+      return this.course(this.courseId);
+    },
     availableTutors: function(){
-      
-
       if(this.tutors){
       return this.tutors.filter( (tutor) =>
       {
